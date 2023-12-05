@@ -36,7 +36,7 @@ export const Contributions = () => {
             ? opacity = "opacity-60"
             : 11 <= count && count <= 13
             ? opacity = "opacity-80"
-            : 14 < count && "opacity-100";
+            : opacity = "opacity-100";
 
         return opacity;
     };
@@ -46,19 +46,19 @@ export const Contributions = () => {
      * @param count APIで取得したコミット数
      * @returns kusaの表示・非表示と文字サイズのCSS
      */
-    const createKusa = (count: number) => {
-        let kusa;
+    const createKusa = (count: number): string => {
+        let kusa: string = "";
         count === 0
             ? kusa = "hidden"
             : 1 <= count && count <= 2
-            ? kusa = "block text-xl"
+            ? kusa = "block w-8 h-8 z-10"
             : 3 <= count && count <= 6
-            ? kusa = "block text-2xl"
+            ? kusa = "block w-10 h-10 z-20"
             : 7 <= count && count <= 10
-            ? kusa = "block text-3xl"
+            ? kusa = "block w-12 h-12 z-30"
             : 11 <= count && count <= 13
-            ? kusa = "block text-4xl"
-            : 14 < count && "block text-5xl";
+            ? kusa = "block w-16 h-16 z-40"
+            : kusa = "block w-20 h-20 z-50";
 
         return kusa;
     }
@@ -69,7 +69,7 @@ export const Contributions = () => {
      * @returns kusaの画像パス
      */
     const createKusaImage = (count: number): string => {
-        let kusaItem: string = "";
+        let kusaItem: string = "/image/img_lv5.svg";
         count === 0
             ? kusaItem = "/image/img_lv1.svg"
             : 1 <= count && count <= 2
@@ -80,7 +80,7 @@ export const Contributions = () => {
             ? kusaItem = "/image/img_lv3.svg"
             : 11 <= count && count <= 13
             ? kusaItem = "/image/img_lv4.svg"
-            : 14 < count && "/image/img_lv5.svg";
+            : kusaItem = "/image/img_lv5.svg";
 
         return kusaItem;
     }
@@ -88,8 +88,8 @@ export const Contributions = () => {
     // topとleftをランダムに生成する関数
     type ramdomPositionType = () => {top:string, left:string};
     const createRandom: ramdomPositionType = () => {
-        const top = Math.floor(Math.random() * 100);
-        const left = Math.floor(Math.random() * 100);
+        const top = 10 + Math.floor(Math.random() * 81);
+        const left = 5 + Math.floor(Math.random() * 91);
         const PositionStyles = {
             top: top + "%",
             left: left + "%",
@@ -109,6 +109,7 @@ export const Contributions = () => {
                                 width={50}
                                 height={50}
                                 priority={true}
+                                className="w-full h-full"
                             />
                         </div>
                     ))
