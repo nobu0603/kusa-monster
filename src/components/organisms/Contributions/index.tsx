@@ -88,7 +88,7 @@ export const Contributions = () => {
     // topとleftをランダムに生成する関数
     type ramdomPositionType = () => {top:string, left:string};
     const createRandom: ramdomPositionType = () => {
-        const top = 10 + Math.floor(Math.random() * 81);
+        const top = -5 + Math.floor(Math.random() * 71);
         const left = 5 + Math.floor(Math.random() * 91);
         const PositionStyles = {
             top: top + "%",
