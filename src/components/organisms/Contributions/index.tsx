@@ -1,6 +1,7 @@
 import { useContributions } from "@/hooks/useContributes";
 import { MyContributes } from "@/pages/api/contributions/[userName]";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export const Contributions = () => {
     // 取得したコミット数の配列データを管理するステート
@@ -23,8 +24,8 @@ export const Contributions = () => {
      * @param count APIで取得したコミット数
      * @returns opacityのCSS
      */
-    const createOpacity = (count: number) => {
-        let opacity;
+    const createOpacity = (count: number): string => {
+        let opacity: string = "";
         count === 0
             ? opacity = "opacity-0"
             : 1 <= count && count <= 2
@@ -62,6 +63,28 @@ export const Contributions = () => {
         return kusa;
     }
 
+    /**
+     * Kusaの画像パスを生成する関数
+     * @param count APIで取得したコミット数
+     * @returns kusaの画像パス
+     */
+    const createKusaImage = (count: number): string => {
+        let kusaItem: string = "";
+        count === 0
+            ? kusaItem = "/image/img_lv1.svg"
+            : 1 <= count && count <= 2
+            ? kusaItem = "/image/img_lv1.svg"
+            : 3 <= count && count <= 6
+            ? kusaItem = "/image/img_lv2.svg"
+            : 7 <= count && count <= 10
+            ? kusaItem = "/image/img_lv3.svg"
+            : 11 <= count && count <= 13
+            ? kusaItem = "/image/img_lv4.svg"
+            : 14 < count && "/image/img_lv5.svg";
+
+        return kusaItem;
+    }
+
     // topとleftをランダムに生成する関数
     type ramdomPositionType = () => {top:string, left:string};
     const createRandom: ramdomPositionType = () => {
@@ -79,7 +102,15 @@ export const Contributions = () => {
             <div className="absolute w-full h-1/4 md:h-1/6 bottom-0 left-0 right-0 bg-yellow-900">
                 {myContributes &&
                     myContributes.values.map((count: number, index: number) => (
-                        <div className={`absolute text-green-700 ${createKusa(count)}`} style={createRandom()} key={index}>www</div>
+                        <div className={`absolute text-green-700 ${createKusa(count)}`} style={createRandom()} key={index}>
+                            <Image
+                                src={createKusaImage(count)}
+                                alt="草"
+                                width={50}
+                                height={50}
+                                priority={true}
+                            />
+                        </div>
                     ))
                 }
             </div>
