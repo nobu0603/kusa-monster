@@ -13,7 +13,7 @@ export default function Home() {
         <meta name="description" content="草テスト" />
       </Head>
       <main
-        className={`flex min-h-screen flex-col items-center justify-between py-14 ${inter.className}`}
+        className={`flex min-h-screen flex-col items-center justify-between bg-blue-100 ${inter.className}`}
       >
         
         <Contributions />

@@ -76,19 +76,23 @@ export const Contributions = () => {
 
     return (
         <div className="relative flex items-center justify-center w-full h-full min-h-screen overflow-hidden">
-            {myContributes &&
-                myContributes.values.map((count: number, index: number) => (
-                    <div className={`absolute opacity-20 ${createKusa(count)}`} style={createRandom()} key={index}>www</div>
-                ))
-            }
-            <div className="relative flex items-center justify-start flex-col gap-2 flex-wrap mx-auto w-10/12 md:w-[1264px] h-[160px]">
+            <div className="absolute w-full h-1/4 md:h-1/6 bottom-0 left-0 right-0 bg-yellow-900">
                 {myContributes &&
                     myContributes.values.map((count: number, index: number) => (
-                        <div className="border border-blue-900 rounded" key={index}>
-                            <div className={`w-3.5 h-3.5 bg-[#04336C] ${createOpacity(count)}`}></div>
-                        </div>
+                        <div className={`absolute text-green-700 ${createKusa(count)}`} style={createRandom()} key={index}>www</div>
                     ))
                 }
+            </div>
+            <div className="w-full px-3 md:px-5 bg-blue-100 overflow-x-scroll">
+                <div className="relative flex items-center justify-start flex-col gap-2 flex-wrap mx-auto w-[1284px] h-[180px] p-2.5 bg-white">
+                    {myContributes &&
+                        myContributes.values.map((count: number, index: number) => (
+                            <div className="w-4 h-4 border border-green-900 rounded" key={index}>
+                                <div className={`w-3.5 h-3.5 bg-green-900 ${createOpacity(count)}`}></div>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
         </div>
     );
