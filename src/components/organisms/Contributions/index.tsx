@@ -1,6 +1,6 @@
 import { useContributions } from "@/hooks/useContributes";
 import { MyContributes } from "@/pages/api/contributions/[userName]";
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import Image from "next/image";
 
 export const Contributions = () => {
@@ -18,6 +18,21 @@ export const Contributions = () => {
     })();
 // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+    /**
+     * GitHubのコミット数を数える
+     * @param count APIで取得したコミット数
+     */
+    let kusaCount: number = 0;
+    let commitCount: number = 0;
+    myContributes &&
+        myContributes.values.map((count: number) => {
+            if (count > 0) {
+                kusaCount++;
+                commitCount += count;
+            }
+    });
+    // console.log(kusaCount);
 
     /**
      * GitHubの草の色を決める関数
@@ -98,7 +113,7 @@ export const Contributions = () => {
     };
 
     return (
-        <div className="relative flex items-center justify-center w-full h-full min-h-screen overflow-hidden">
+        <div className="relative flex items-center justify-center flex-col gap-4 w-full h-full min-h-screen overflow-hidden">
             <div className="absolute w-full h-1/4 md:h-1/6 bottom-0 left-0 right-0 bg-yellow-900">
                 {myContributes &&
                     myContributes.values.map((count: number, index: number) => (
@@ -114,6 +129,15 @@ export const Contributions = () => {
                         </div>
                     ))
                 }
+            </div>
+            <div className="w-full">
+                <div className="relative flex items-center justify-center flex-col gap-4 w-full h-1/4 md:h-1/6">
+                    <div className="flex items-center justify-center flex-col gap-4">
+                        <h1 className="text-4xl font-bold text-green-900">GitHub Contributions</h1>
+                        <p className="text-xl">本日までの合計草数：<span className="font-bold text-green-900">{kusaCount}</span></p>
+                        <p className="text-xl">本日までの合計コミット数：<span className="font-bold text-green-900">{commitCount}</span></p>
+                    </div>
+                </div>
             </div>
             <div className="w-full px-3 md:px-5 bg-blue-100 overflow-x-scroll">
                 <div className="relative flex items-center justify-start flex-col gap-2 flex-wrap mx-auto w-[1284px] h-[180px] p-2.5 bg-white">
