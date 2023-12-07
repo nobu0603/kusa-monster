@@ -131,7 +131,7 @@ export const Contributions = () => {
                 }
             </div>
             <div className="absolute w-full h-1/4 md:h-1/6 top-0 left-0 right-0 bg-transparent">
-                <div className="absolute top-[15%] left-[5%] w-[598px] h-[178px]">
+                <div className="absolute top-[15%] left-[5%] w-[150px] md:w-[598px] h-auto md:h-[178px]">
                     <Image
                         src="/image/img_cloud_01.svg"
                         alt="雲のイラスト"
@@ -141,7 +141,7 @@ export const Contributions = () => {
                         className="w-full h-full"
                     />
                 </div>
-                <div className="absolute top-[25%] right-[10%] w-[470px] h-[180px]">
+                <div className="absolute top-[25%] right-[10%] w-[120px] md:w-[470px] h-auto md:h-[180px]">
                     <Image
                         src="/image/img_cloud_02.svg"
                         alt="雲のイラスト"
@@ -151,7 +151,7 @@ export const Contributions = () => {
                         className="w-full h-full"
                     />
                 </div>
-                <div className="absolute top-[60%] right-[40%] w-[362px] h-[148px]">
+                <div className="absolute top-[60%] right-[40%] w-[100px] md:w-[362px] h-auto md:h-[148px]">
                     <Image
                         src="/image/img_cloud_03.svg"
                         alt="雲のイラスト"
@@ -175,7 +175,7 @@ export const Contributions = () => {
                 <div className="relative flex items-center justify-start flex-col gap-2 flex-wrap mx-auto w-[1284px] h-[180px] p-2.5 bg-white">
                     {myContributes &&
                         myContributes.values.map((count: number, index: number) => (
-                            <div className="w-4 h-4 border border-green-900 rounded" key={index}>
+                            <div className="w-4 h-4 border border-green-900" key={index}>
                                 <div className={`w-3.5 h-3.5 bg-green-900 ${createOpacity(count)}`}></div>
                             </div>
                         ))
