@@ -103,7 +103,7 @@ export const Contributions = () => {
     // topとleftをランダムに生成する関数
     type ramdomPositionType = () => {top:string, left:string};
     const createRandom: ramdomPositionType = () => {
-        const top = -5 + Math.floor(Math.random() * 71);
+        const top = -10 + Math.floor(Math.random() * 61);
         const left = 5 + Math.floor(Math.random() * 91);
         const PositionStyles = {
             top: top + "%",
@@ -114,7 +114,7 @@ export const Contributions = () => {
 
     return (
         <div className="relative flex items-center justify-center flex-col gap-4 w-full h-full min-h-screen overflow-hidden">
-            <div className="absolute w-full h-1/4 md:h-1/6 bottom-0 left-0 right-0 bg-yellow-900">
+            <div className="absolute w-full h-1/4 md:h-1/6 bottom-0 left-0 right-0 bg-[#663a31]">
                 {myContributes &&
                     myContributes.values.map((count: number, index: number) => (
                         <div className={`absolute text-green-700 ${createKusa(count)}`} style={createRandom()} key={index}>
@@ -129,6 +129,38 @@ export const Contributions = () => {
                         </div>
                     ))
                 }
+            </div>
+            <div className="absolute w-full h-1/4 md:h-1/6 top-0 left-0 right-0 bg-transparent">
+                <div className="absolute top-[15%] left-[5%] w-[598px] h-[178px]">
+                    <Image
+                        src="/image/img_cloud_01.svg"
+                        alt="雲のイラスト"
+                        width={598}
+                        height={178}
+                        priority={true}
+                        className="w-full h-full"
+                    />
+                </div>
+                <div className="absolute top-[25%] right-[10%] w-[470px] h-[180px]">
+                    <Image
+                        src="/image/img_cloud_02.svg"
+                        alt="雲のイラスト"
+                        width={470}
+                        height={180}
+                        priority={true}
+                        className="w-full h-full"
+                    />
+                </div>
+                <div className="absolute top-[60%] right-[40%] w-[362px] h-[148px]">
+                    <Image
+                        src="/image/img_cloud_03.svg"
+                        alt="雲のイラスト"
+                        width={362}
+                        height={148}
+                        priority={true}
+                        className="w-full h-full"
+                    />
+                </div>
             </div>
             <div className="w-full">
                 <div className="relative flex items-center justify-center flex-col gap-4 w-full h-1/4 md:h-1/6">
