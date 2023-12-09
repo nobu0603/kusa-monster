@@ -2,6 +2,12 @@ import { useContributions } from "@/hooks/useContributes";
 import { MyContributes } from "@/pages/api/contributions/[userName]";
 import { useState, useEffect, use } from "react";
 import Image from "next/image";
+import { Pixelify_Sans } from "next/font/google";
+
+const PixelifySansFont = Pixelify_Sans({
+  weight: "500",
+  subsets: ["latin"],
+});
 
 export const Contributions = () => {
     // 取得したコミット数の配列データを管理するステート
@@ -165,9 +171,9 @@ export const Contributions = () => {
             <div className="w-full">
                 <div className="relative flex items-center justify-center flex-col gap-4 w-full h-1/4 md:h-1/6">
                     <div className="flex items-center justify-center flex-col gap-2 md:gap-4">
-                        <h1 className="text-xl md:text-4xl font-bold text-green-900">GitHub Contributions</h1>
-                        <p className="text-base md:text-xl">本日までの合計草数：<span className="font-bold text-green-900">{kusaCount}</span></p>
-                        <p className="text-base md:text-xl">本日までの合計コミット数：<span className="font-bold text-green-900">{commitCount}</span></p>
+                        <h1 className={`text-2xl md:text-6xl font-bold text-green-900 ${PixelifySansFont.className}`}>GitHub Contributions</h1>
+                        <p className={`text-base md:text-3xl ${PixelifySansFont.className}`}>Total Contributions count to date : <span className="font-bold text-green-900">{kusaCount}</span></p>
+                        <p className={`text-base md:text-3xl ${PixelifySansFont.className}`}>Total Commits to date : <span className="font-bold text-green-900">{commitCount}</span></p>
                     </div>
                 </div>
             </div>
@@ -175,8 +181,8 @@ export const Contributions = () => {
                 <div className="relative flex items-center justify-start flex-col flex-wrap mx-auto w-[868px] h-[132px] p-2.5 bg-white">
                     {myContributes &&
                         myContributes.values.map((count: number, index: number) => (
-                            <div className="w-4 h-4 border border-green-900" key={index}>
-                                <div className={`w-3.5 h-3.5 bg-green-900 ${createOpacity(count)}`}></div>
+                            <div className="w-4 h-4 [&:nth-child(7n+1)]:border-t border-r border-b [&:nth-child(-n+7)]:border-l border-green-900" key={index}>
+                                <div className={`w-full h-full bg-green-900 ${createOpacity(count)}`}></div>
                             </div>
                         ))
                     }
