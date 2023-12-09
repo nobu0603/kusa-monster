@@ -164,15 +164,15 @@ export const Contributions = () => {
             </div>
             <div className="w-full">
                 <div className="relative flex items-center justify-center flex-col gap-4 w-full h-1/4 md:h-1/6">
-                    <div className="flex items-center justify-center flex-col gap-4">
-                        <h1 className="text-4xl font-bold text-green-900">GitHub Contributions</h1>
-                        <p className="text-xl">本日までの合計草数：<span className="font-bold text-green-900">{kusaCount}</span></p>
-                        <p className="text-xl">本日までの合計コミット数：<span className="font-bold text-green-900">{commitCount}</span></p>
+                    <div className="flex items-center justify-center flex-col gap-2 md:gap-4">
+                        <h1 className="text-xl md:text-4xl font-bold text-green-900">GitHub Contributions</h1>
+                        <p className="text-base md:text-xl">本日までの合計草数：<span className="font-bold text-green-900">{kusaCount}</span></p>
+                        <p className="text-base md:text-xl">本日までの合計コミット数：<span className="font-bold text-green-900">{commitCount}</span></p>
                     </div>
                 </div>
             </div>
             <div className="w-full px-3 md:px-5 bg-blue-100 overflow-x-scroll">
-                <div className="relative flex items-center justify-start flex-col gap-2 flex-wrap mx-auto w-[1284px] h-[180px] p-2.5 bg-white">
+                <div className="relative flex items-center justify-start flex-col flex-wrap mx-auto w-[868px] h-[132px] p-2.5 bg-white">
                     {myContributes &&
                         myContributes.values.map((count: number, index: number) => (
                             <div className="w-4 h-4 border border-green-900" key={index}>
