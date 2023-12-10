@@ -72,14 +72,14 @@ export const Contributions = () => {
         count === 0
             ? kusa = "hidden"
             : 1 <= count && count <= 2
-            ? kusa = "block w-8 h-8 z-10"
+            ? kusa = "block w-8 h-8 z-10 -top-8"
             : 3 <= count && count <= 6
-            ? kusa = "block w-10 h-10 z-20"
+            ? kusa = "block w-10 h-10 z-20 -top-10"
             : 7 <= count && count <= 10
-            ? kusa = "block w-12 h-12 z-30"
+            ? kusa = "block w-12 h-12 z-30 -top-12"
             : 11 <= count && count <= 13
-            ? kusa = "block w-16 h-16 z-40"
-            : kusa = "block w-20 h-20 z-50";
+            ? kusa = "block w-16 h-16 z-40 -top-16"
+            : kusa = "block w-20 h-20 z-50 -top-20";
 
         return kusa;
     }
@@ -107,12 +107,12 @@ export const Contributions = () => {
     }
 
     // topとleftをランダムに生成する関数
-    type ramdomPositionType = () => {top:string, left:string};
+    type ramdomPositionType = () => {left:string};
     const createRandom: ramdomPositionType = () => {
-        const top = -10 + Math.floor(Math.random() * 61);
-        const left = 5 + Math.floor(Math.random() * 91);
+        // const top = -10 + Math.floor(Math.random() * 61);
+        const left = 3 + Math.floor(Math.random() * 97);
         const PositionStyles = {
-            top: top + "%",
+            // top: top + "%",
             left: left + "%",
         }
         return PositionStyles;
@@ -120,7 +120,7 @@ export const Contributions = () => {
 
     return (
         <div className="relative flex items-center justify-center flex-col gap-4 w-full h-full min-h-screen overflow-hidden">
-            <div className="absolute w-full h-1/4 md:h-1/6 bottom-0 left-0 right-0 bg-[#663a31]">
+            <div className="absolute w-full h-10 md:h-28 bottom-0 left-0 right-0 bg-[#663a31]">
                 {myContributes &&
                     myContributes.values.map((count: number, index: number) => (
                         <div className={`absolute text-green-700 ${createKusa(count)}`} style={createRandom()} key={index}>
