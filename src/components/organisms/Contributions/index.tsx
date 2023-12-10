@@ -137,11 +137,11 @@ export const Contributions = () => {
                 }
             </div>
             <div className="absolute w-full h-1/4 md:h-1/6 top-0 left-0 right-0 bg-transparent">
-                <div className="absolute top-[15%] left-[5%] w-[150px] md:w-[598px] h-auto md:h-[178px]">
+                <div className="absolute top-[15%] left-[5%] w-[150px] md:w-[469px] h-auto md:h-[178px]">
                     <Image
                         src="/image/img_cloud_01.svg"
                         alt="雲のイラスト"
-                        width={598}
+                        width={469}
                         height={178}
                         priority={true}
                         className="w-full h-full"

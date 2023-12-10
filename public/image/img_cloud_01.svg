@@ -1,49 +1,43 @@
-<svg width="598" height="178" viewBox="0 0 598 178" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect y="145" width="64" height="33" fill="#B4FAFC"/>
-<rect x="16" y="129" width="32" height="16" fill="#B4FAFC"/>
-<rect x="32" y="112" width="16" height="17" fill="#B4FAFC"/>
-<rect x="64" y="160" width="502" height="18" fill="#B4FAFC"/>
-<rect x="113" y="112" width="405" height="48" fill="#B4FAFC"/>
-<rect x="550" y="145" width="32" height="15" fill="#B4FAFC"/>
-<rect x="129" y="97" width="65" height="32" fill="#B4FAFC"/>
-<rect x="145" y="80" width="17" height="32" fill="#B4FAFC"/>
-<rect x="162" y="64" width="16" height="16" fill="#B4FAFC"/>
-<rect x="226" y="64" width="16" height="16" fill="#B4FAFC"/>
-<rect x="226" y="113" width="194" height="16" fill="#B4FAFC"/>
-<rect x="242" y="48" width="33" height="65" fill="#B4FAFC"/>
-<rect x="275" y="81" width="16" height="32" fill="#B4FAFC"/>
-<rect x="291" y="97" width="16" height="16" fill="#B4FAFC"/>
-<rect x="356" y="81" width="32" height="32" fill="#B4FAFC"/>
-<rect x="388" y="97" width="16" height="16" fill="#B4FAFC"/>
-<rect x="258" y="32" width="17" height="16" fill="#B4FAFC"/>
-<rect x="275" y="16" width="16" height="16" fill="#B4FAFC"/>
-<rect x="372" y="48" width="16" height="33" fill="#B4FAFC"/>
-<rect x="388" y="32" width="16" height="16" fill="#B4FAFC"/>
-<rect x="453" y="113" width="48" height="16" fill="#B4FAFC"/>
-<rect x="469" y="97" width="32" height="16" fill="#B4FAFC"/>
-<rect x="485" y="81" width="33" height="16" fill="#B4FAFC"/>
-<rect x="48" y="96" width="49" height="49" fill="white"/>
-<rect x="64" y="145" width="49" height="15" fill="white"/>
-<rect x="97" y="112" width="16" height="33" fill="white"/>
-<rect x="162" y="80" width="80" height="33" fill="white"/>
-<rect x="194" y="113" width="32" height="16" fill="white"/>
-<rect x="178" y="48" width="48" height="32" fill="white"/>
-<rect x="275" y="32" width="97" height="49" fill="white"/>
-<rect x="291" y="81" width="65" height="16" fill="white"/>
-<rect x="307" y="97" width="49" height="16" fill="white"/>
-<rect x="291" y="16" width="65" height="16" fill="white"/>
-<rect x="291" width="32" height="16" fill="white"/>
-<rect x="388" y="48" width="97" height="49" fill="white"/>
-<rect x="404" y="97" width="65" height="16" fill="white"/>
-<rect x="420" y="113" width="33" height="16" fill="white"/>
-<rect x="485" y="48" width="17" height="33" fill="white"/>
-<rect x="404" y="32" width="81" height="16" fill="white"/>
-<rect x="404" y="16" width="65" height="16" fill="white"/>
-<rect x="420" width="27" height="16" fill="white"/>
-<rect x="518" y="129" width="32" height="31" fill="white"/>
-<rect x="550" y="129" width="48" height="16" fill="white"/>
-<rect x="501" y="113" width="81" height="16" fill="white"/>
-<rect x="501" y="97" width="65" height="16" fill="white"/>
-<rect x="518" y="81" width="48" height="16" fill="white"/>
-<rect x="518" y="64" width="32" height="17" fill="white"/>
+<svg width="469" height="178" viewBox="0 0 469 178" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="33" y="150" width="404" height="28" fill="#B4FAFC"/>
+<rect x="16" y="112" width="373" height="48" fill="#B4FAFC"/>
+<rect x="421" y="145" width="32" height="15" fill="#B4FAFC"/>
+<rect y="97" width="65" height="32" fill="#B4FAFC"/>
+<rect x="16" y="80" width="17" height="32" fill="#B4FAFC"/>
+<rect x="33" y="64" width="16" height="16" fill="#B4FAFC"/>
+<rect x="97" y="64" width="30" height="16" fill="#B4FAFC"/>
+<rect x="97" y="113" width="194" height="32" fill="#B4FAFC"/>
+<rect x="113" y="48" width="33" height="65" fill="#B4FAFC"/>
+<rect x="146" y="81" width="16" height="32" fill="#B4FAFC"/>
+<rect x="162" y="97" width="16" height="16" fill="#B4FAFC"/>
+<rect x="227" y="81" width="32" height="56" fill="#B4FAFC"/>
+<rect x="259" y="97" width="16" height="34" fill="#B4FAFC"/>
+<rect x="129" y="32" width="17" height="32" fill="#B4FAFC"/>
+<rect x="146" y="16" width="16" height="16" fill="#B4FAFC"/>
+<rect x="243" y="48" width="16" height="47" fill="#B4FAFC"/>
+<rect x="259" y="32" width="16" height="16" fill="#B4FAFC"/>
+<rect x="324" y="113" width="48" height="16" fill="#B4FAFC"/>
+<rect x="340" y="97" width="32" height="34" fill="#B4FAFC"/>
+<rect x="356" y="81" width="33" height="23" fill="#B4FAFC"/>
+<rect x="33" y="80" width="80" height="33" fill="white"/>
+<rect x="65" y="93" width="32" height="36" fill="white"/>
+<rect x="49" y="48" width="48" height="45" fill="white"/>
+<rect x="146" y="32" width="97" height="49" fill="white"/>
+<rect x="162" y="64" width="65" height="33" fill="white"/>
+<rect x="178" y="75" width="49" height="38" fill="white"/>
+<rect x="162" y="16" width="65" height="41" fill="white"/>
+<rect x="162" width="32" height="45" fill="white"/>
+<rect x="259" y="48" width="97" height="49" fill="white"/>
+<rect x="275" y="75" width="65" height="38" fill="white"/>
+<rect x="291" y="86" width="33" height="43" fill="white"/>
+<rect x="340" y="48" width="33" height="33" fill="white"/>
+<rect x="275" y="32" width="81" height="32" fill="white"/>
+<rect x="275" y="16" width="65" height="27" fill="white"/>
+<rect x="291" width="27" height="29" fill="white"/>
+<rect x="389" y="113" width="32" height="47" fill="white"/>
+<rect x="410" y="129" width="59" height="16" fill="white"/>
+<rect x="372" y="113" width="81" height="18" fill="white"/>
+<rect x="372" y="97" width="65" height="22" fill="white"/>
+<rect x="389" y="81" width="48" height="26" fill="white"/>
+<rect x="389" y="64" width="32" height="26" fill="white"/>
 </svg>
