@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>草テスト</title>
-        <meta name="description" content="草テスト" />
+        <title>Contributions Count</title>
+        <meta name="description" content="Contributions Count" />
       </Head>
       <main
         className={`flex min-h-screen flex-col items-center justify-between bg-blue-100 ${inter.className}`}
