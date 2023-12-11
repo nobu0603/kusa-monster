@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Head>
         <title>Contributions Count</title>
-        <meta name="description" content="Contributions Count" />
+        <meta name="description" content="Contributions Count!" />
       </Head>
       <main
         className={`flex min-h-screen flex-col items-center justify-between bg-blue-100 ${inter.className}`}
