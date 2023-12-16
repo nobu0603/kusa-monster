@@ -171,7 +171,7 @@ export const Contributions = () => {
             <div className="w-full">
                 <div className="relative flex items-center justify-center flex-col gap-4 w-full h-1/4 md:h-1/6">
                     <div className="flex items-center justify-center flex-col gap-2 md:gap-4">
-                        <h1 className={`text-2xl md:text-6xl font-bold text-green-900 ${PixelifySansFont.className}`}>My GitHub Contributions</h1>
+                        <h1 className={`text-2xl md:text-6xl font-bold text-green-900 ${PixelifySansFont.className}`}>My GitHub Contributions!</h1>
                         <p className={`text-base md:text-3xl ${PixelifySansFont.className}`}>Total Contributions to Date : <span className="font-bold text-green-700">{kusaCount}</span></p>
                         <p className={`text-base md:text-3xl ${PixelifySansFont.className}`}>Total Commits to Date : <span className="font-bold text-green-700">{commitCount}</span></p>
                     </div>
