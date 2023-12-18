@@ -3,6 +3,7 @@ import { MyContributes } from "@/pages/api/contributions/[userName]";
 import { useState, useEffect, use } from "react";
 import Image from "next/image";
 import { Pixelify_Sans } from "next/font/google";
+import dayjs from "dayjs";
 
 const PixelifySansFont = Pixelify_Sans({
   weight: "500",
@@ -24,6 +25,10 @@ export const Contributions = () => {
     })();
 // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+    /* 日付の取得 */
+    const yearMonthBefore = dayjs().subtract(12, "month").format("YYYY-MM-DD");
+    const today = dayjs().format("YYYY-MM-DD");
 
     /**
      * GitHubのコミット数を数える
@@ -172,6 +177,7 @@ export const Contributions = () => {
                 <div className="relative flex items-center justify-center flex-col gap-4 w-full h-1/4 md:h-1/6">
                     <div className="flex items-center justify-center flex-col gap-2 md:gap-4">
                         <h1 className={`text-2xl md:text-6xl font-bold text-green-900 ${PixelifySansFont.className}`}>My GitHub Contributions!</h1>
+                        <p className={`text-base md:text-3xl ${PixelifySansFont.className}`}>{yearMonthBefore} - {today}</p>
                         <p className={`text-base md:text-3xl ${PixelifySansFont.className}`}>Total Contributions to Date : <span className="font-bold text-green-900">{kusaCount}</span></p>
                         <p className={`text-base md:text-3xl ${PixelifySansFont.className}`}>Total Commits to Date : <span className="font-bold text-green-900">{commitCount}</span></p>
                     </div>
