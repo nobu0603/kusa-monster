@@ -131,7 +131,7 @@ export const Contributions = () => {
                         <div className={`absolute text-green-700 ${createKusa(count)}`} style={createRandom()} key={index}>
                             <Image
                                 src={createKusaImage(count)}
-                                alt="草"
+                                alt="kusa"
                                 width={50}
                                 height={50}
                                 priority={true}
@@ -145,7 +145,7 @@ export const Contributions = () => {
                 <div className="absolute top-[15%] left-[5%] w-[150px] md:w-[469px] h-auto md:h-[178px]">
                     <Image
                         src="/image/img_cloud_01.svg"
-                        alt="雲1のイラスト"
+                        alt="cloud 1"
                         width={469}
                         height={178}
                         priority={true}
@@ -155,7 +155,7 @@ export const Contributions = () => {
                 <div className="absolute top-[25%] right-[10%] w-[120px] md:w-[470px] h-auto md:h-[180px]">
                     <Image
                         src="/image/img_cloud_02.svg"
-                        alt="雲2のイラスト"
+                        alt="cloud 2"
                         width={470}
                         height={180}
                         priority={true}
@@ -165,7 +165,7 @@ export const Contributions = () => {
                 <div className="absolute top-[60%] right-[40%] w-[100px] md:w-[362px] h-auto md:h-[148px]">
                     <Image
                         src="/image/img_cloud_03.svg"
-                        alt="雲3のイラスト"
+                        alt="cloud 3"
                         width={362}
                         height={148}
                         priority={true}
