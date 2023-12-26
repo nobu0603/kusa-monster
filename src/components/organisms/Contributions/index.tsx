@@ -131,7 +131,7 @@ export const Contributions = () => {
                         <div className={`absolute text-green-700 ${createKusa(count)}`} style={createRandom()} key={index}>
                             <Image
                                 src={createKusaImage(count)}
-                                alt="random na kusa"
+                                alt="random na kusa no image"
                                 width={50}
                                 height={50}
                                 priority={true}
