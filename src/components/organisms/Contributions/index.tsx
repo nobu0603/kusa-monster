@@ -27,7 +27,9 @@ export const Contributions = () => {
   }, []);
 
     /* 日付の取得 */
-    const yearMonthBefore = dayjs().subtract(12, "month").format("YYYY-MM-DD");
+    // const startDate = dayjs().subtract(12, "month").format("YYYY-MM-DD");
+    const startDate = "2023-12-31";
+    const lastDate = "2024-12-31";
     const today = dayjs().format("YYYY-MM-DD");
 
     /**
@@ -177,14 +179,15 @@ export const Contributions = () => {
                 <div className="relative flex items-center justify-center flex-col gap-4 w-full h-1/4 md:h-1/6">
                     <div className="flex items-center justify-center flex-col gap-2 md:gap-5">
                         <h1 className={`text-2xl md:text-6xl font-bold text-green-900 ${PixelifySansFont.className}`}>My GitHub Contributions!</h1>
-                        <p className={`flex items-center gap-3 text-base md:text-3xl ${PixelifySansFont.className}`}><span>From : <span className="font-bold text-green-900">{yearMonthBefore}</span></span> <span className="text-xs md:text-xl">&gt;</span> <span>To : <span className="font-bold text-green-900">{today}</span></span></p>
+                        <p className={`flex items-center gap-3 text-base md:text-3xl ${PixelifySansFont.className}`}><span>Today : <span className="font-bold text-green-900">{today}</span></span></p>
+                        <p className={`flex items-center gap-3 text-base md:text-3xl ${PixelifySansFont.className}`}><span>From : <span className="font-bold text-green-900">{startDate}</span></span> <span className="text-xs md:text-xl">&gt;</span> <span>To : <span className="font-bold text-green-900">{lastDate}</span></span></p>
                         <p className={`text-base md:text-3xl ${PixelifySansFont.className}`}>Total Contributions to Date : <span className="font-bold text-green-900">{kusaCount}</span></p>
                         <p className={`text-base md:text-3xl ${PixelifySansFont.className}`}>Total Commits to Date : <span className="font-bold text-green-900">{commitCount}</span></p>
                     </div>
                 </div>
             </div>
             <div className="w-full px-3 md:px-5 bg-blue-100 overflow-x-scroll">
-                <div className="relative flex items-center justify-start flex-col flex-wrap mx-auto w-[868px] h-[132px] p-2.5 bg-white">
+                <div className="relative flex items-start justify-start flex-col flex-wrap mx-auto w-[868px] h-[132px] p-2.5 bg-white">
                     {myContributes &&
                         myContributes.values.map((count: number, index: number) => (
                             <div className="w-4 h-4 [&:nth-child(7n+1)]:border-t border-r border-b [&:nth-child(-n+7)]:border-l border-green-900" key={index}>

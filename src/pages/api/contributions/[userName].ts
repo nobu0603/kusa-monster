@@ -42,23 +42,27 @@ export default async function handler(
   });
 
   // 現在の年月日と時刻を取得
-  const now = dayjs().format("YYYY-MM-DDThh:mm:ss");
+  // const now = dayjs().format("YYYY-MM-DDThh:mm:ss");
+  // 終了日を指定
+  const lastDate = "2024-12-31T00:00:00"
   
+  // 開始日を指定
+  const startDate = "2023-12-31T00:00:00"
   // 6ヶ月前の年月日と時刻を取得
-  const sixMonthBefore = dayjs()
-    .subtract(12, "month")
-    .format("YYYY-MM-DDThh:mm:ss");
+  // const startDate = dayjs()
+  //   .subtract(12, "month")
+  //   .format("YYYY-MM-DDThh:mm:ss");
 
   /**
    * クエリ部分
    * @param userName ユーザー名
-   * @param now 現在の年月日
-   * @param sixMonthBefore 6ヶ月前の年月日
+   * @param lastDate 終了日
+   * @param startDate 開始日
    */
   const query = `
-    query contributions ($userName:String!, $now:DateTime!, $sixMonthBefore:DateTime!) {
+    query contributions ($userName:String!, $lastDate:DateTime!, $startDate:DateTime!) {
       user(login: $userName) {
-        contributionsCollection(to: $now, from: $sixMonthBefore) {
+        contributionsCollection(to: $lastDate, from: $startDate) {
           contributionCalendar {
             weeks {
               contributionDays {
@@ -75,8 +79,8 @@ export default async function handler(
   // クエリとそれに必要な引数を渡し、octokitを使いデータを取得する
   const contributions = await octokit.graphql<Contributions>(query, {
     userName,
-    now,
-    sixMonthBefore,
+    lastDate,
+    startDate,
   });
 
   // レスポンスからコミット数だけを抜き出し格納するための配列を定義
