@@ -32,11 +32,21 @@ export const Contributions = () => {
     const lastDate = "2024-12-31";
     const today = dayjs().format("YYYY-MM-DD");
 
-    // 2024-01-01から2024-12-31までの日数を取得
-    const dateDiff = dayjs(lastDate).diff(dayjs(startDate), "day");
     // 今日の日付の順番を取得
     const todayIndex = dayjs(today).diff(dayjs(startDate), "day");
-    console.log(todayIndex);
+
+    /**
+     * GitHubの今日のコミット数を数える
+     * @param count APIで取得したコミット数
+     */
+    let todayCount: number = 0;
+    myContributes &&
+        myContributes.values.map((count: number, index: number) => {
+            if (index === todayIndex) {
+                todayCount = count;
+            }
+    });
+    // console.log(todayCount);
 
     /**
      * GitHubのコミット数を数える
