@@ -59,6 +59,9 @@ export const Contributions = () => {
             }
     });
     averageCount = Math.floor(averageCount / (todayIndex + 1));
+    // averageCountを小数点第一位で四捨五入
+    averageCount = Math.round(averageCount * 10) / 10;
+    console.log(averageCount);
 
     /**
      * GitHubのコミット数を数える
