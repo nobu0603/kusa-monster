@@ -47,7 +47,7 @@ export default async function handler(
   const lastDate = "2024-12-31T00:00:00"
   
   // 開始日を指定
-  const startDate = "2023-12-31T00:00:00"
+  const startDate = "2024-01-01T00:00:00"
   // 6ヶ月前の年月日と時刻を取得
   // const startDate = dayjs()
   //   .subtract(12, "month")
