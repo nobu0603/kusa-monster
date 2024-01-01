@@ -32,13 +32,13 @@ export const Contributions = () => {
     const lastDate = "2024-12-31";
     const today = dayjs().format("YYYY-MM-DD");
 
-    // 今日の日付の順番を取得
-    const todayIndex = dayjs(today).diff(dayjs(startDate), "day");
-
+    
     /**
      * GitHubの今日のコミット数を数える
      * @param count APIで取得したコミット数
-     */
+    */
+    // 今日の日付の順番を取得
+    const todayIndex = dayjs(today).diff(dayjs(startDate), "day");
     let todayCount: number = 0;
     myContributes &&
         myContributes.values.map((count: number, index: number) => {
@@ -46,7 +46,19 @@ export const Contributions = () => {
                 todayCount = count;
             }
     });
-    // console.log(todayCount);
+    
+    /**
+     * GitHubの今日までの平均コミット数を数える
+     * @param count APIで取得したコミット数
+    */
+    let averageCount: number = 0;
+    myContributes &&
+        myContributes.values.map((count: number, index: number) => {
+            if (index <= todayIndex) {
+                averageCount += count;
+            }
+    });
+    averageCount = Math.floor(averageCount / (todayIndex + 1));
 
     /**
      * GitHubのコミット数を数える
