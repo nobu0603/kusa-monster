@@ -127,18 +127,18 @@ export const Contributions = () => {
      * @returns kusaの画像パス
      */
     const createKusaImage = (count: number): string => {
-        let kusaItem: string = "/image/img_lv5.png";
+        let kusaItem: string = "/image/img_lv5.svg";
         count === 0
-            ? kusaItem = "/image/img_lv1.png"
+            ? kusaItem = "/image/img_lv1.svg"
             : 1 <= count && count <= 2
-            ? kusaItem = "/image/img_lv1.png"
+            ? kusaItem = "/image/img_lv1.svg"
             : 3 <= count && count <= 6
-            ? kusaItem = "/image/img_lv2.png"
+            ? kusaItem = "/image/img_lv2.svg"
             : 7 <= count && count <= 10
-            ? kusaItem = "/image/img_lv3.png"
+            ? kusaItem = "/image/img_lv3.svg"
             : 11 <= count && count <= 13
-            ? kusaItem = "/image/img_lv4.png"
-            : kusaItem = "/image/img_lv5.png";
+            ? kusaItem = "/image/img_lv4.svg"
+            : kusaItem = "/image/img_lv5.svg";
 
         return kusaItem;
     }
