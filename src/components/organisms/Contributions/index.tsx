@@ -144,7 +144,7 @@ export const Contributions = () => {
                 }
             </div>
             <div className="absolute w-full h-1/4 md:h-1/6 top-0 left-0 right-0 bg-transparent">
-                <div className="absolute top-[15%] left-[5%] w-[150px] md:w-[469px] h-auto md:h-[178px]">
+                <div className="absolute top-[15%] left-[5%] w-[150px] md:w-[calc(469/1700*100vw)] max-w-[469px] h-auto">
                     <Image
                         src="/image/img_cloud_01.svg"
                         alt="cloud 1"
@@ -154,7 +154,7 @@ export const Contributions = () => {
                         className="w-full h-full"
                     />
                 </div>
-                <div className="absolute top-[25%] right-[10%] w-[120px] md:w-[470px] h-auto md:h-[180px]">
+                <div className="absolute top-[25%] right-[10%] w-[120px] md:w-[calc(470/1700*100vw)] max-w-[470px] h-auto">
                     <Image
                         src="/image/img_cloud_02.svg"
                         alt="cloud 2"
@@ -164,7 +164,7 @@ export const Contributions = () => {
                         className="w-full h-full"
                     />
                 </div>
-                <div className="absolute top-[60%] right-[40%] w-[100px] md:w-[362px] h-auto md:h-[148px]">
+                <div className="absolute top-[60%] right-[40%] w-[100px] md:w-[calc(362/1700*100vw)] max-w-[362px] h-auto">
                     <Image
                         src="/image/img_cloud_03.svg"
                         alt="cloud 3"
