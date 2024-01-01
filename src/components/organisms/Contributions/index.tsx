@@ -32,6 +32,12 @@ export const Contributions = () => {
     const lastDate = "2024-12-31";
     const today = dayjs().format("YYYY-MM-DD");
 
+    // 2024-01-01から2024-12-31までの日数を取得
+    const dateDiff = dayjs(lastDate).diff(dayjs(startDate), "day");
+    // 今日の日付の順番を取得
+    const todayIndex = dayjs(today).diff(dayjs(startDate), "day");
+    console.log(todayIndex);
+
     /**
      * GitHubのコミット数を数える
      * @param count APIで取得したコミット数
@@ -45,7 +51,7 @@ export const Contributions = () => {
                 commitCount += count;
             }
     });
-    // console.log(kusaCount);
+    // console.log(myContributes);
 
     /**
      * GitHubの草の色を決める関数
@@ -179,10 +185,10 @@ export const Contributions = () => {
                 <div className="relative flex items-center justify-center flex-col gap-4 w-full h-1/4 md:h-1/6">
                     <div className="flex items-center justify-center flex-col gap-2 md:gap-5">
                         <h1 className={`text-2xl md:text-6xl font-bold text-green-900 ${PixelifySansFont.className}`}>My GitHub Contributions!</h1>
-                        <p className={`flex items-center gap-3 text-base md:text-3xl ${PixelifySansFont.className}`}><span>Today : <span className="font-bold text-green-900">{today}</span></span></p>
                         <p className={`flex items-center gap-3 text-base md:text-3xl ${PixelifySansFont.className}`}><span>From : <span className="font-bold text-green-900">{startDate}</span></span> <span className="text-xs md:text-xl">&gt;</span> <span>To : <span className="font-bold text-green-900">{lastDate}</span></span></p>
                         <p className={`text-base md:text-3xl ${PixelifySansFont.className}`}>Total Contributions to Date : <span className="font-bold text-green-900">{kusaCount}</span></p>
                         <p className={`text-base md:text-3xl ${PixelifySansFont.className}`}>Total Commits to Date : <span className="font-bold text-green-900">{commitCount}</span></p>
+                        <p className={`flex items-center gap-3 text-base md:text-3xl ${PixelifySansFont.className}`}><span>Today : <span className="font-bold text-green-900">{today}</span></span></p>
                     </div>
                 </div>
             </div>
