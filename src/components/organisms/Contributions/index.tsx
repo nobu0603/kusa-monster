@@ -199,6 +199,7 @@ export const Contributions = () => {
                         <p className={`text-base md:text-3xl ${PixelifySansFont.className}`}>Total Contributions to Date : <span className="font-bold text-green-900">{kusaCount}</span></p>
                         <p className={`text-base md:text-3xl ${PixelifySansFont.className}`}>Total Commits to Date : <span className="font-bold text-green-900">{commitCount}</span></p>
                         <p className={`flex items-center gap-3 text-base md:text-3xl ${PixelifySansFont.className}`}><span>Today : <span className="font-bold text-green-900">{today}</span></span></p>
+                        <p className={`text-base md:text-3xl ${PixelifySansFont.className}`}>Number of Commits Today : <span className="font-bold text-green-900">{todayCount}</span></p>
                     </div>
                 </div>
             </div>
