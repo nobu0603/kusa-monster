@@ -207,14 +207,14 @@ export const Contributions = () => {
             </div>
             <div className="w-full">
                 <div className="relative flex items-center justify-center flex-col gap-4 w-full h-1/4 md:h-1/6">
-                    <div className="flex items-center justify-center flex-col gap-2 md:gap-5">
-                        <h1 className={`text-2xl md:text-6xl font-bold text-green-900 ${PixelifySansFont.className}`}>GitHub Contributions<br/><span className="flex items-center gap-3 text-base md:text-3xl"><span>From : <span className="font-bold text-green-900">{startDate}</span></span> <span className="text-xs md:text-xl">&gt;</span> <span>To : <span className="font-bold text-green-900">{lastDate}</span></span></span></h1>
+                    <div className={`flex items-center justify-center flex-col gap-2 md:gap-5 ${PixelifySansFont.className}`}>
+                        <h1 className="text-2xl md:text-6xl font-bold text-green-900">GitHub Contributions<br/><span className="flex items-center gap-3 text-base md:text-3xl"><span>From : <span className="font-bold text-green-900">{startDate}</span></span> <span className="text-xs md:text-xl">&gt;</span> <span>To : <span className="font-bold text-green-900">{lastDate}</span></span></span></h1>
                         <div className="text-left">
-                            <p className={`text-base md:text-3xl ${PixelifySansFont.className}`}>Total Contributions to Date : <span className="font-bold text-green-900">{kusaCount}</span></p>
-                            <p className={`text-base md:text-3xl ${PixelifySansFont.className}`}>Total Commits to Date : <span className="font-bold text-green-900">{commitCount}</span></p>
-                            <p className={`text-base md:text-3xl ${PixelifySansFont.className}`}>Average Commits to Date : <span className="font-bold text-green-900">{averageCount}</span></p>
-                            <p className={`flex items-center gap-3 text-base md:text-3xl ${PixelifySansFont.className}`}><span>Today : <span className="font-bold text-green-900">{today}</span></span></p>
-                            <p className={`text-base md:text-3xl ${PixelifySansFont.className}`}>Number of Commits Today : <span className="font-bold text-green-900">{todayCount}</span></p>
+                            <p className="text-base md:text-3xl">Total Contributions to Date : <span className="font-bold text-green-900">{kusaCount}</span></p>
+                            <p className="text-base md:text-3xl">Total Commits to Date : <span className="font-bold text-green-900">{commitCount}</span></p>
+                            <p className="text-base md:text-3xl">Average Commits to Date : <span className="font-bold text-green-900">{averageCount}</span></p>
+                            <p className="flex items-center gap-3 text-base md:text-3xl"><span>Today : <span className="font-bold text-green-900">{today}</span></span></p>
+                            <p className="text-base md:text-3xl">Number of Commits Today : <span className="font-bold text-green-900">{todayCount}</span></p>
                         </div>
                     </div>
                 </div>
