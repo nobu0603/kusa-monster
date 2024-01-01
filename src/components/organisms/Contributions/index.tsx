@@ -97,18 +97,18 @@ export const Contributions = () => {
      * @returns kusaの画像パス
      */
     const createKusaImage = (count: number): string => {
-        let kusaItem: string = "/image/img_lv5.svg";
+        let kusaItem: string = "/image/img_lv5.png";
         count === 0
-            ? kusaItem = "/image/img_lv1.svg"
+            ? kusaItem = "/image/img_lv1.png"
             : 1 <= count && count <= 2
-            ? kusaItem = "/image/img_lv1.svg"
+            ? kusaItem = "/image/img_lv1.png"
             : 3 <= count && count <= 6
-            ? kusaItem = "/image/img_lv2.svg"
+            ? kusaItem = "/image/img_lv2.png"
             : 7 <= count && count <= 10
-            ? kusaItem = "/image/img_lv3.svg"
+            ? kusaItem = "/image/img_lv3.png"
             : 11 <= count && count <= 13
-            ? kusaItem = "/image/img_lv4.svg"
-            : kusaItem = "/image/img_lv5.svg";
+            ? kusaItem = "/image/img_lv4.png"
+            : kusaItem = "/image/img_lv5.png";
 
         return kusaItem;
     }
@@ -146,32 +146,32 @@ export const Contributions = () => {
             <div className="absolute w-full h-1/4 md:h-1/6 top-0 left-0 right-0 bg-transparent">
                 <div className="absolute top-[15%] left-[5%] w-[150px] md:w-[calc(469/1700*100vw)] max-w-[469px] h-auto">
                     <Image
-                        src="/image/img_cloud_01.svg"
+                        src="/image/img_cloud_01.png"
                         alt="cloud 1"
                         width={469}
-                        height={178}
+                        height={214}
                         priority={true}
-                        className="w-full h-full"
+                        className="w-full h-auto"
                     />
                 </div>
                 <div className="absolute top-[25%] right-[10%] w-[120px] md:w-[calc(470/1700*100vw)] max-w-[470px] h-auto">
                     <Image
-                        src="/image/img_cloud_02.svg"
+                        src="/image/img_cloud_02.png"
                         alt="cloud 2"
                         width={470}
-                        height={180}
+                        height={209}
                         priority={true}
-                        className="w-full h-full"
+                        className="w-full h-auto"
                     />
                 </div>
                 <div className="absolute top-[60%] right-[40%] w-[100px] md:w-[calc(362/1700*100vw)] max-w-[362px] h-auto">
                     <Image
-                        src="/image/img_cloud_03.svg"
+                        src="/image/img_cloud_03.png"
                         alt="cloud 3"
                         width={362}
-                        height={148}
+                        height={172}
                         priority={true}
-                        className="w-full h-full"
+                        className="w-full h-auto"
                     />
                 </div>
             </div>
