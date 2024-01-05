@@ -213,8 +213,7 @@ export const Contributions = () => {
                             <p className="text-base md:text-3xl">Total Contributions to Date : <span className="font-bold text-green-900">{kusaCount}</span></p>
                             <p className="text-base md:text-3xl">Total Commits to Date : <span className="font-bold text-green-900">{commitCount}</span></p>
                             <p className="text-base md:text-3xl">Average Commits to Date : <span className="font-bold text-green-900">{averageCount}</span></p>
-                            {/* <p className="flex items-center gap-3 text-base md:text-3xl"><span>Today : <span className="font-bold text-green-900">{today}</span></span></p> */}
-                            <p className="text-base md:text-3xl">Today&apos;s Commits : <span className="font-bold text-green-900">{todayCount}</span></p>
+                            <p className="text-base md:text-3xl">{today}&apos;s Commits : <span className="font-bold text-green-900">{todayCount}</span></p>
                         </div>
                     </div>
                 </div>
