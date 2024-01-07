@@ -147,7 +147,8 @@ export const Contributions = () => {
     type ramdomPositionType = () => {left:string};
     const createRandom: ramdomPositionType = () => {
         // const top = -10 + Math.floor(Math.random() * 61);
-        const left = 5 + Math.floor(Math.random() * 90);
+        const wW = window.innerWidth;
+        const left = wW > 768 ?  Math.floor(Math.random() * 96) : Math.floor(Math.random() * 90);
         const PositionStyles = {
             // top: top + "%",
             left: left + "%",
