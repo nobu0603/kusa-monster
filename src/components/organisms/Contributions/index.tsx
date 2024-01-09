@@ -127,7 +127,7 @@ export const Contributions = () => {
      * @returns kusaの画像パス
      */
     const createKusaImage = (count: number): string => {
-        let kusaItem: string = "/image/img_lv5.svg";
+        let kusaItem: string = "/image/img_lv1.svg";
         count === 0
             ? kusaItem = "/image/img_lv1.svg"
             : 1 <= count && count <= 2
