@@ -211,9 +211,9 @@ export const Contributions = () => {
                     <div className={`flex items-center justify-center flex-col gap-2 md:gap-4 ${PixelifySansFont.className}`}>
                         <h1 className="text-2xl md:text-6xl font-bold"><span className="text-green-900">GitHub Contributions</span><br/><span className="flex items-center gap-3 text-base md:text-3xl"><span>From : <span className="font-bold text-green-900">{startDate}</span></span> <span className="text-xs md:text-xl">&gt;</span> <span>To : <span className="font-bold text-green-900">{lastDate}</span></span></span></h1>
                         <div className="text-left">
-                            <p className="text-base md:text-3xl">Total Contributions to Date : <span className="font-bold text-green-900">{kusaCount}</span></p>
-                            <p className="text-base md:text-3xl">Total Commits to Date : <span className="font-bold text-green-900">{commitCount}</span></p>
-                            <p className="text-base md:text-3xl">Average Commits to Date : <span className="font-bold text-green-900">{averageCount}</span></p>
+                            <p className="text-base md:text-3xl">Total Contributions : <span className="font-bold text-green-900">{kusaCount}</span></p>
+                            <p className="text-base md:text-3xl">Total Commits : <span className="font-bold text-green-900">{commitCount}</span></p>
+                            <p className="text-base md:text-3xl">Average Commits : <span className="font-bold text-green-900">{averageCount}</span></p>
                             <p className="text-base md:text-3xl">{today}&apos;s Commits : <span className="font-bold text-green-900">{todayCount}</span></p>
                         </div>
                     </div>
