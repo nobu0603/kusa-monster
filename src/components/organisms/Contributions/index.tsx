@@ -27,7 +27,6 @@ export const Contributions = () => {
   }, []);
 
     /* 日付の取得 */
-    // const startDate = dayjs().subtract(12, "month").format("YYYY-MM-DD");
     const startDate = "2024-01-01";
     const lastDate = "2024-12-31";
     const today = dayjs().format("YYYY-MM-DD");
