@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { Octokit } from "@octokit/core";
-import dayjs from "dayjs";
+// import dayjs from "dayjs";
 
 // レスポンスの型
 export type Contributions = {
@@ -37,7 +37,6 @@ export default async function handler(
 
   // インスタンスを作成し、認証情報として環境変数に定義したGitHubトークンを渡す
   const octokit = new Octokit({
-    // authorization: process.env.NEXT_PUBLIC_GITHUB_TOKEN,
     auth: process.env.NEXT_PUBLIC_GITHUB_TOKEN,
   });
 
@@ -48,7 +47,7 @@ export default async function handler(
   
   // 開始日を指定
   const startDate = "2024-01-01T00:00:00"
-  // 6ヶ月前の年月日と時刻を取得
+  // 12ヶ月前の年月日と時刻を取得
   // const startDate = dayjs()
   //   .subtract(12, "month")
   //   .format("YYYY-MM-DDThh:mm:ss");
