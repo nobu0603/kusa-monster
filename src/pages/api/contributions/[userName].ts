@@ -40,18 +40,12 @@ export default async function handler(
     auth: process.env.NEXT_PUBLIC_GITHUB_TOKEN,
   });
 
-  // 現在の年月日と時刻を取得
-  // const now = dayjs().format("YYYY-MM-DDThh:mm:ss");
+  // 開始日を指定
+  const startDate = "2024-01-01T00:00:00"
+
   // 終了日を指定
   const lastDate = "2024-12-31T00:00:00"
   
-  // 開始日を指定
-  const startDate = "2024-01-01T00:00:00"
-  // 12ヶ月前の年月日と時刻を取得
-  // const startDate = dayjs()
-  //   .subtract(12, "month")
-  //   .format("YYYY-MM-DDThh:mm:ss");
-
   /**
    * クエリ部分
    * @param userName ユーザー名
