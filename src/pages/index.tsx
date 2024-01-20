@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Contributions Count</title>
+        <title>GitHub Contributions Count</title>
         <meta name="description" content="Contributions Count!" />
       </Head>
       <main
