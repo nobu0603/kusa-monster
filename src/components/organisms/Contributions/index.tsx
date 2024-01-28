@@ -40,10 +40,10 @@ export const Contributions = () => {
     const todayIndex = dayjs(today).diff(dayjs(startDate), "day");
     let todayCount: number = 0;
     myContributes &&
-        myContributes.values.map((count: number, index: number) => {
-            if (index === todayIndex) {
-                todayCount = count;
-            }
+    myContributes.values.map((count: number, index: number) => {
+        if (index === todayIndex) {
+            todayCount = count;
+        }
     });
     
     /**
