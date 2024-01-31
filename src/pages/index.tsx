@@ -10,7 +10,6 @@ export default function Home() {
       <Head>
         <title>GitHub Contributions</title>
         <meta name="description" content="GitHub My Contributions Count!" />
-        <meta  property="og:image" content="ogp.jpg"/>
       </Head>
       <main
         className={`flex h-[calc(100dvh)] flex-col items-center justify-between bg-blue-100 ${inter.className}`}
