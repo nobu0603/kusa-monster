@@ -154,7 +154,7 @@ export const Contributions = () => {
     };
 
     return (
-        <div className="relative flex items-center justify-center flex-col gap-4 w-full h-full min-h-screen overflow-hidden">
+        <div className="relative flex items-center justify-center flex-col gap-4 w-full h-full overflow-hidden">
             <div className="absolute w-full h-10 md:h-28 bottom-0 left-0 right-0 bg-[#663a31] bg-[url('/image/bg_soil.png')] bg-repeat-x bg-contain">
                 {myContributes &&
                     myContributes.values.map((count: number, index: number) => (
