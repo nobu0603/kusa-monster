@@ -12,7 +12,7 @@ export default function Home() {
         <meta name="description" content="GitHub My Contributions Count!" />
       </Head>
       <main
-        className={`flex h-screen flex-col items-center justify-between bg-blue-100 ${inter.className}`}
+        className={`flex h-[calc(100dvh)] flex-col items-center justify-between bg-blue-100 ${inter.className}`}
       >
         
         <Contributions />
