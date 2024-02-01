@@ -1,5 +1,7 @@
 ## kusa-monster
 
+GitHub Contributions count.
+
 First, run the development server:
 
 ```bash
