@@ -1,6 +1,6 @@
 import { useContributions } from "@/hooks/useContributes";
 import { MyContributes } from "@/pages/api/contributions/[userName]";
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Pixelify_Sans } from "next/font/google";
 import dayjs from "dayjs";
