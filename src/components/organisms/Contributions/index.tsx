@@ -32,7 +32,7 @@ export const Contributions = () => {
     const today = dayjs().format("YYYY-MM-DD");
 
     // 2024年1月1日から今日までの日数を取得
-    const dayCount = dayjs(today).diff(dayjs(startDate), "day") + 1;
+    const dayCount = dayjs(lastDate).diff(dayjs(startDate), "day") + 1;
     
     /**
      * GitHubの今日のコミット数を数える
