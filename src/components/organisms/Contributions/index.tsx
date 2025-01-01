@@ -39,7 +39,7 @@ export const Contributions = () => {
      * @param count APIで取得したコミット数
     */
     // 今日の日付の順番を取得
-    const todayIndex = dayjs(today).diff(dayjs(startDate), "day");
+    const todayIndex = dayjs(lastDate).diff(dayjs(startDate), "day");
     let todayCount: number = 0;
     myContributes &&
     myContributes.values.map((count: number, index: number) => {
