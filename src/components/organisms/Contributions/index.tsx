@@ -55,7 +55,7 @@ export const Contributions = () => {
     let averageCount: number = 0;
     myContributes &&
         myContributes.values.map((count: number, index: number) => {
-            if (index <= todayIndex) {
+              if (index <= todayIndex + 1) {
                 averageCount += count;
             }
     });
@@ -214,7 +214,7 @@ export const Contributions = () => {
                             <p className="text-base md:text-3xl">Total Contributions : <span className="font-bold text-green-900">{kusaCount}</span></p>
                             <p className="text-base md:text-3xl">Total Commits : <span className="font-bold text-green-900">{commitCount}</span></p>
                             <p className="text-base md:text-3xl">Average Commits : <span className="font-bold text-green-900">{averageCount}</span></p>
-                            <p className="text-base md:text-3xl">{today}&apos;s Commits : <span className="font-bold text-green-900">{todayCount}</span></p>
+                            <p className="text-base md:text-3xl">{lastDate}&apos;s Commits : <span className="font-bold text-green-900">{todayCount}</span></p>
                         </div>
                     </div>
                 </div>
