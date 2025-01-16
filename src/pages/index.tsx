@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>GitHub Contributions<br />Completed!</></title>
+        <title>GitHub Contributions<br />Completed!</title>
         <meta name="description" content="GitHub My Contributions Count!" />
         <meta property="og:image" content="/image/opengraph-image.jpg"/>
       </Head>
